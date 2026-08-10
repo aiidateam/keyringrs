@@ -1,7 +1,14 @@
-"""Test only run on linux without dbus setup to test the keyutil can be set as the credential method"""
+"""Integration tests for Linux keyutils-backed credentials."""
+
+import os
 
 import pytest
 from keyringrs import Entry, CredentialType
+
+pytestmark = pytest.mark.skipif(
+    os.environ.get("KEYRINGRS_RUN_INTEGRATION_TESTS") != "1",
+    reason="requires Linux keyutils or a configured DBus keyring backend",
+)
 
 
 def test_entry():

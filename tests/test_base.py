@@ -1,5 +1,12 @@
+import os
+
 import pytest
 from keyringrs import Entry
+
+pytestmark = pytest.mark.skipif(
+    os.environ.get("KEYRINGRS_RUN_INTEGRATION_TESTS") != "1",
+    reason="requires a configured system keyring backend",
+)
 
 
 def test_entry():
