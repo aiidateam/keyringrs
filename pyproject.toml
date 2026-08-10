@@ -19,7 +19,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
     "Programming Language :: Rust",
 ]
 urls = { Homepage = "https://github.com/aiidateam/keyringrs", Repository = "https://github.com/aiidateam/keyringrs" }
