@@ -1,17 +1,10 @@
-from enum import Enum, auto
-from typing import Self
+from typing import ClassVar
 
-class CredentialType(Enum):
-    """
-    Enumeration of credential types. Use this to specify how the credential
-    should be stored or interpreted.
+class CredentialType:
+    """Native Rust credential type exposed by the extension module."""
 
-    :cvar Default: Default credential handling
-    :cvar KeyUtils: Credential handling using key utilities
-    """
-
-    Default = auto()
-    KeyUtils = auto()
+    Default: ClassVar["CredentialType"]
+    KeyUtils: ClassVar["CredentialType"]
 
 class Entry:
     """
@@ -26,7 +19,7 @@ class Entry:
         user: str,
         target: str | None = None,
         credential_type: CredentialType = CredentialType.Default,
-    ) -> Self:
+    ) -> "Entry":
         """
         Construct a new Entry instance.
 
