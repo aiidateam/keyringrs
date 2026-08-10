@@ -4,12 +4,25 @@ build-backend = "maturin"
 
 [project]
 name = "keyringrs"
+description = "Python bindings for the Rust keyring crate"
+readme = "README.md"
 requires-python = ">=3.9"
+license = { text = "Apache-2.0 OR MIT" }
+license-files = ["LICENSE-APACHE", "LICENSE-MIT"]
+authors = [
+    { name = "The keyringrs developers" },
+]
+keywords = ["keyring", "credentials", "security", "rust", "pyo3"]
 classifiers = [
-    "Programming Language :: Rust",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Rust",
 ]
+urls = { Homepage = "https://github.com/aiidateam/keyringrs", Repository = "https://github.com/aiidateam/keyringrs" }
 dynamic = ["version"]
 
 [tool.maturin]
