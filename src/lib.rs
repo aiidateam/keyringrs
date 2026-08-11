@@ -26,7 +26,7 @@ fn to_py_err(err: Error) -> PyErr {
     }
 }
 
-#[pyclass(eq, eq_int)]
+#[pyclass(eq, eq_int, from_py_object)]
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub(crate) enum CredentialType {
     Default = 0,
