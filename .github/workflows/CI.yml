@@ -38,7 +38,7 @@ jobs:
       - name: Set up uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
       - name: Cache folder for uv
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: /tmp/.uv-cache
           key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
@@ -98,7 +98,7 @@ jobs:
         run: irm https://astral.sh/uv/install.ps1 | iex
         shell: powershell
       - name: Cache folder for uv
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: /tmp/.uv-cache
           key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
